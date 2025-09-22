@@ -1,0 +1,14 @@
+stages:
+  scrape:
+    cmd: python scripts/scrape_articles.py
+    outs:
+      - data/raw/raw_articles.csv
+  clean:
+    cmd: python scripts/clean_articles.py
+    deps:
+      - scripts/clean_articles.py
+      - data/raw/raw_articles.csv
+    outs:
+      - data/processed/clean_articles.csv
+      - data/processed/tokenized.csv
+      - data/processed/hf_dataset

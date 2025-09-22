@@ -6,7 +6,8 @@ from rich import print
 
 urls = [
     "https://finextra.com/newsarticle/12345/example1",
-    "https://finextra.com/newsarticle/67890/example2"
+    "https://finextra.com/newsarticle/67890/example2",
+    "https://medium.com/@parsaahm/i-failed-ae8be3087ada"
 ]
 
 def scrape(url):

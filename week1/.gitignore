@@ -1,0 +1,100 @@
+# Python Virtual Environments
+myenv/
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Data files (but keep sample/small datasets)
+data/raw/*.csv
+data/processed/*.csv
+data/processed/*.json
+data/processed/*.parquet
+data/processed/*.arrow
+data/processed/hf_dataset/
+
+# Keep sample data
+!data/raw/sample_*.csv
+!data/processed/sample_*.csv
+
+# Machine Learning
+models/
+checkpoints/
+*.pkl
+*.joblib
+*.h5
+*.pb
+*.onnx
+wandb/
+mlruns/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+*.log
+logs/
+
+# DVC (Data Version Control)
+/dvcstore/
+.dvc/cache/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# API keys and secrets
+secrets/
+credentials/
+*.key
+*.pem

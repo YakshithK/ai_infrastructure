@@ -1,0 +1,34 @@
+schema: '2.0'
+stages:
+  scrape:
+    cmd: python scripts/scrape_articles.py
+    outs:
+    - path: data/raw/raw_articles.csv
+      hash: md5
+      md5: 27c0f7e0ce932008d94a3582b0923c28
+      size: 10584
+  clean:
+    cmd: python scripts/clean_articles.py
+    deps:
+    - path: data/raw/raw_articles.csv
+      hash: md5
+      md5: 27c0f7e0ce932008d94a3582b0923c28
+      size: 10584
+    - path: scripts/clean_articles.py
+      hash: md5
+      md5: 734f0af253070331d4d9cd682a6c8904
+      size: 735
+    outs:
+    - path: data/processed/clean_articles.csv
+      hash: md5
+      md5: 4c7afea25950c05f72ea0ba92d589547
+      size: 20765
+    - path: data/processed/hf_dataset
+      hash: md5
+      md5: 7cc9b07b26568c7873b68f7e9a3d05a0.dir
+      size: 11057
+      nfiles: 3
+    - path: data/processed/tokenized.csv
+      hash: md5
+      md5: 9bc08cd121b78601aa39ea2ccd072d24
+      size: 24075
