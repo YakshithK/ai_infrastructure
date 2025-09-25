@@ -1,1 +1,7 @@
 myenv/
+wandb/
+__pycache__/
+hf_train/
+hf_test/
+hf_train_tok/
+hf_test_tok/
